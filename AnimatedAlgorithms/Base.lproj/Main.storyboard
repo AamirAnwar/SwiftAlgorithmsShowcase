@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MS0-8P-vS8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List View Controller-->
+        <scene sceneID="Qx8-sT-Mjx">
+            <objects>
+                <tableViewController id="RaP-Pl-oIy" customClass="ALListViewController" customModule="AnimatedAlgorithms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="CwO-x0-0oI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="rcn-O4-6ND">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MKE-5J-WLr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKE-5J-WLr" id="hiV-cV-T1w">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bubble sort" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgI-32-GFC">
+                                                    <rect key="frame" x="16" y="11" width="343" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lgI-32-GFC" firstAttribute="top" secondItem="hiV-cV-T1w" secondAttribute="topMargin" constant="3" id="GFL-6f-Tks"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lgI-32-GFC" secondAttribute="bottom" constant="3.5" id="aCE-2L-BM3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lgI-32-GFC" secondAttribute="trailing" constant="8" id="azU-ka-V9M"/>
+                                                <constraint firstItem="lgI-32-GFC" firstAttribute="leading" secondItem="hiV-cV-T1w" secondAttribute="leadingMargin" constant="8" id="gd4-65-rJ1"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="oMd-54-C3i" kind="show" id="xmD-6O-a78"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="RaP-Pl-oIy" id="OOQ-gn-IqI"/>
+                            <outlet property="delegate" destination="RaP-Pl-oIy" id="iWH-1o-x7u"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="MKM-Tl-kkL"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CxF-c8-Yau" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1242" y="20"/>
+        </scene>
+        <!--Algorithm Detail View Controller-->
+        <scene sceneID="afF-kg-tNb">
+            <objects>
+                <viewController id="oMd-54-C3i" customClass="ALAlgorithmDetailViewController" customModule="AnimatedAlgorithms" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jft-ny-Fve">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="Hub-Ld-qni"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMi-rZ-rki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2070" y="22"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="f2B-bZ-XPz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MS0-8P-vS8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="N21-Nd-szP">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RaP-Pl-oIy" kind="relationship" relationship="rootViewController" id="fI8-EO-u7O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4R6-C4-2hi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318.39999999999998" y="20.689655172413794"/>
+        </scene>
+    </scenes>
+</document>
