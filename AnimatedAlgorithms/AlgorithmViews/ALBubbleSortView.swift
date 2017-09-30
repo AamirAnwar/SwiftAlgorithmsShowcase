@@ -12,9 +12,9 @@ fileprivate let kInterBubbleSpacing:CGFloat = 8.0
 fileprivate let kSidePadding:CGFloat = 8.0
 fileprivate let animDuration:Double = 1
 
-class ALBubbleSortView: UIView, CAAnimationDelegate {
+class ALBubbleSortView: AnimatedAlgorithmView, CAAnimationDelegate {
 
-    var unsortedList:[Int]!
+    var unsortedList:[Int] = [10,9,8,7,6,1,2,3,4,5]
     fileprivate var bubbleArray = [UILabel]()
     fileprivate var bubbleSize:CGFloat = 22
     fileprivate var currentIndex = 0
@@ -50,6 +50,10 @@ class ALBubbleSortView: UIView, CAAnimationDelegate {
             bubbleArray += [bubble]
             
         }
+    }
+    
+    override func start() {
+        bubbleSort()
     }
     
     func bubbleSort() {

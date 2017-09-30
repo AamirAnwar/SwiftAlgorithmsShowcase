@@ -14,5 +14,11 @@ class ALListViewController: UITableViewController {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let id = segue.identifier, id == kShowAnimationDetailSegueIdentifier, let detailVC = segue.destination as? ALAlgorithmDetailViewController {
+            detailVC.sortingView = ALBubbleSortView()
+        }
+    }
 }
 
