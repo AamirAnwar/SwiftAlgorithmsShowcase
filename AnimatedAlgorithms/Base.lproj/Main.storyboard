@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
-                            <tableViewSection id="rcn-O4-6ND">
+                            <tableViewSection headerTitle="Sorting" id="rcn-O4-6ND">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MKE-5J-WLr">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MKE-5J-WLr" id="hiV-cV-T1w">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
@@ -42,9 +42,28 @@
                                                 <constraint firstItem="lgI-32-GFC" firstAttribute="leading" secondItem="hiV-cV-T1w" secondAttribute="leadingMargin" constant="8" id="gd4-65-rJ1"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="oMd-54-C3i" kind="show" identifier="ShowAnimationDetail" id="xmD-6O-a78"/>
-                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kBo-Ba-9zq">
+                                        <rect key="frame" x="0.0" y="128" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kBo-Ba-9zq" id="bP1-ym-X9V">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selection Sort" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1e-fS-5Ii">
+                                                    <rect key="frame" x="16" y="11" width="343" height="77"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s1e-fS-5Ii" firstAttribute="top" secondItem="bP1-ym-X9V" secondAttribute="topMargin" constant="3" id="EqT-uR-egP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="s1e-fS-5Ii" secondAttribute="bottom" constant="3.5" id="dyQ-kW-BnR"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="s1e-fS-5Ii" secondAttribute="trailing" constant="8" id="i5w-mC-gG4"/>
+                                                <constraint firstItem="s1e-fS-5Ii" firstAttribute="leading" secondItem="bP1-ym-X9V" secondAttribute="leadingMargin" constant="8" id="q04-ax-hLo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>

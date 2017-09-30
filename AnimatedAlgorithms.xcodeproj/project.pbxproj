@@ -14,6 +14,7 @@
 		4371462F1F76D969005BB4EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4371462D1F76D969005BB4EF /* LaunchScreen.storyboard */; };
 		43F5E5C21F7FB11000817407 /* ALBubbleSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5E5C11F7FB11000817407 /* ALBubbleSortView.swift */; };
 		43F5E5C41F7FB19B00817407 /* Commons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5E5C31F7FB19B00817407 /* Commons.swift */; };
+		43F5E5C61F7FE91F00817407 /* ALSelectionSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43F5E5C51F7FE91F00817407 /* ALSelectionSortView.swift */; };
 		43FDB6161F76DBF1006AECAE /* ALAlgorithmDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FDB6151F76DBF1006AECAE /* ALAlgorithmDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		437146301F76D969005BB4EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		43F5E5C11F7FB11000817407 /* ALBubbleSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALBubbleSortView.swift; sourceTree = "<group>"; };
 		43F5E5C31F7FB19B00817407 /* Commons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commons.swift; sourceTree = "<group>"; };
+		43F5E5C51F7FE91F00817407 /* ALSelectionSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALSelectionSortView.swift; sourceTree = "<group>"; };
 		43FDB6151F76DBF1006AECAE /* ALAlgorithmDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALAlgorithmDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				43F5E5C11F7FB11000817407 /* ALBubbleSortView.swift */,
+				43F5E5C51F7FE91F00817407 /* ALSelectionSortView.swift */,
 			);
 			path = AlgorithmViews;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			files = (
 				437146271F76D969005BB4EF /* ALListViewController.swift in Sources */,
 				43F5E5C21F7FB11000817407 /* ALBubbleSortView.swift in Sources */,
+				43F5E5C61F7FE91F00817407 /* ALSelectionSortView.swift in Sources */,
 				43F5E5C41F7FB19B00817407 /* Commons.swift in Sources */,
 				43FDB6161F76DBF1006AECAE /* ALAlgorithmDetailViewController.swift in Sources */,
 				437146251F76D969005BB4EF /* AppDelegate.swift in Sources */,
