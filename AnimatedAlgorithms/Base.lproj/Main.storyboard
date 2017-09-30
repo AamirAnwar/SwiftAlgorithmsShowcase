@@ -43,7 +43,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="oMd-54-C3i" kind="show" id="xmD-6O-a78"/>
+                                            <segue destination="oMd-54-C3i" kind="show" identifier="ShowAnimationDetail" id="xmD-6O-a78"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>

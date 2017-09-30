@@ -9,18 +9,17 @@
 import UIKit
 
 class ALAlgorithmDetailViewController: UIViewController, CAAnimationDelegate {
-    var sortingView:ALBubbleSortView!
+    var sortingView:AnimatedAlgorithmView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        sortingView = ALBubbleSortView(frame: view.bounds)
-        sortingView.unsortedList = [1,5,7,3,2,9,4,10]
+        sortingView.frame = view.bounds
         view.addSubview(sortingView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        sortingView.bubbleSort()
-        
+        sortingView.start()
     }
     
     
