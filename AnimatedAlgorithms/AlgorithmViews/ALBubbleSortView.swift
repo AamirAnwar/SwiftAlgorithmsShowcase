@@ -8,49 +8,25 @@
 
 import UIKit
 
-fileprivate let kInterBubbleSpacing:CGFloat = 8.0
-fileprivate let kSidePadding:CGFloat = 8.0
 fileprivate let animDuration:Double = 1
 
-class ALBubbleSortView: AnimatedAlgorithmView, CAAnimationDelegate {
+class ALBubbleSortView: AnimatedAlgorithmView,CAAnimationDelegate {
+    
 
-    var unsortedList:[Int] = [10,9,8,7,6,1,2,3,4,5]
+    var unsortedList:[Int] = Helpers.getUnsortedList()
     fileprivate var bubbleArray = [UILabel]()
-    fileprivate var bubbleSize:CGFloat = 22
     fileprivate var currentIndex = 0
     fileprivate var didSwap = false
-
+    fileprivate var bubbleSize:CGFloat = 22.0
+    
     override func didMoveToWindow() {
         super.didMoveToWindow()
         if self.superview != nil {
-            createListBubbles(unsortedList: unsortedList)
+            (bubbleArray, bubbleSize) = Helpers.createListBubbles(unsortedList: unsortedList, view: self)
         }
     }
     
-    func createListBubbles(unsortedList:[Int]) -> Void {
-        var x = kInterBubbleSpacing
-        bubbleSize = (self.frame.width - 2*kSidePadding - CGFloat((unsortedList.count - 1) * Int(kInterBubbleSpacing)))/CGFloat(unsortedList.count)
-        
-        bubbleArray.forEach { (bubble) in
-            bubble.removeFromSuperview()
-        }
-        bubbleArray.removeAll()
-        
-        for number in unsortedList {
-            let bubble = UILabel()
-            bubble.text = "\(number)"
-            bubble.textColor = UIColor.white
-            bubble.textAlignment = .center
-            bubble.backgroundColor = UIColor.red.withAlphaComponent(0.6)
-            bubble.layer.cornerRadius = bubbleSize/2
-            bubble.layer.masksToBounds = true
-            bubble.frame = CGRect(x: x, y: self.center.y - bubbleSize/2, width: bubbleSize, height: bubbleSize)
-            x += bubbleSize + kInterBubbleSpacing
-            self.addSubview(bubble)
-            bubbleArray += [bubble]
-            
-        }
-    }
+
     
     override func start() {
         bubbleSort()
@@ -79,7 +55,6 @@ class ALBubbleSortView: AnimatedAlgorithmView, CAAnimationDelegate {
     }
     
     func swapBubble(atIndex i:Int, toIndex j:Int) {
-        
         
         let fromBubble = bubbleArray[i]
         var (x,y) = (fromBubble.center.x, fromBubble.center.y)

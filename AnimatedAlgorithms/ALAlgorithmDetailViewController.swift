@@ -14,6 +14,7 @@ class ALAlgorithmDetailViewController: UIViewController, CAAnimationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         sortingView.frame = view.bounds
+        view.backgroundColor = UIColor.white
         view.addSubview(sortingView)
     }
     
