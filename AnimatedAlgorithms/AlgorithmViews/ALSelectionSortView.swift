@@ -25,6 +25,27 @@ class ALSelectionSortView: AnimatedAlgorithmView {
     }
     
     func selectionSort() {
+        if sortedEndPosition < unsortedList.count - 1 {
+            let subarray = unsortedList[sortedEndPosition+1..<unsortedList.count]
+            if let min = subarray.min(), let minPosition = subarray.index(of: min) {
+                swapElement(atIndex: sortedEndPosition + 1, withElementAtIndex: minPosition)
+                sortedEndPosition += 1
+            }
+        }
+    }
+    
+    func swapElement(atIndex i:Int, withElementAtIndex j:Int) {
+        let fromBubble = bubbles[i]
+        let toBubble = bubbles[j]
+        let temp = fromBubble.frame
         
+        UIView.animate(withDuration: 1, animations: {
+            fromBubble.frame = toBubble.frame
+            toBubble.frame = temp
+        }) { (_) in
+            self.unsortedList.swapAt(i, j)
+            self.bubbles.swapAt(i, j)
+            self.selectionSort()
+        }
     }
 }
